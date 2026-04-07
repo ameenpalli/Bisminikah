@@ -1,0 +1,300 @@
+/* 
+  Bisminikah Design System
+  Theme: Elegant Matrimony (Sophisticated & Modern)
+  Colors: Deep Teal, Gold, Soft White
+*/
+
+:root {
+  --primary: #064e3b; /* Emerald Green */
+  --secondary: #b4975a; /* Sophisticated Gold */
+  --accent: #d4af37; /* Bright Gold */
+  --bg-light: #f9fafb;
+  --white: #ffffff;
+  --text-main: #111827;
+  --text-muted: #4b5563;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Glassmorphism Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(224, 224, 224, 0.3);
+  transition: var(--transition);
+}
+
+nav .brand {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: var(--transition);
+}
+
+nav .nav-links a:hover {
+  color: var(--accent);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(13, 59, 65, 0.2);
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  background: linear-gradient(135deg, rgba(13, 59, 65, 0.05) 0%, rgba(196, 164, 124, 0.05) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 50%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(196, 164, 124, 0.1) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 35px;
+}
+
+/* Featured Profiles Grid */
+.section {
+  padding: 100px 5%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.profile-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  background: #eee;
+}
+
+.profile-info {
+  padding: 20px;
+}
+
+.profile-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Registration Form Preview */
+.register-section {
+  background: var(--primary);
+  color: var(--white);
+  padding: 80px 5%;
+  border-radius: 40px;
+  margin: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Counter Section */
+.counter-box {
+    background: var(--white);
+    padding: 60px 5%;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.counter-item {
+    text-align: center;
+}
+
+.counter-item h2 {
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.counter-item p {
+    font-weight: 600;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+/* Trust Elements */
+.trust-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.trust-item i {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+/* Button Variants */
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Micro-animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content {
+  animation: fadeIn 1s ease-out;
+}
