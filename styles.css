@@ -25,7 +25,7 @@
 
 body {
   font-family: 'Outfit', 'Inter', sans-serif;
-  color: var(--text-dark);
+  color: var(--text-main);
   line-height: 1.6;
   background-color: var(--white);
   overflow-x: hidden;
@@ -60,6 +60,7 @@ nav .brand {
   color: var(--primary);
   text-decoration: none;
   letter-spacing: -1px;
+  flex-shrink: 0;
 }
 
 nav .nav-links {
@@ -131,8 +132,112 @@ nav .nav-links a:hover {
 
 .hero-content p {
   font-size: 1.2rem;
-  color: var(--text-light);
+  color: var(--text-muted);
   margin-bottom: 35px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 4%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        position: fixed;
+        background: white;
+    }
+
+    nav .brand {
+        font-size: 1.2rem;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    nav .nav-actions {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    nav .nav-actions .btn-whatsapp {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+    
+    nav .nav-actions .btn-whatsapp span {
+        display: none; /* Hide 'WhatsApp' text on small mobile screens */
+    }
+
+    nav .nav-actions .btn-primary {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    .hero {
+        padding: 100px 5% 50px;
+        flex-direction: column-reverse; /* Put image at the top or bottom? Usually content first, but image is important. Let's keep content first. */
+    }
+    
+    .hero {
+        flex-direction: column; 
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch; /* Make buttons full width for better touch targets */
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .hero-actions a {
+        width: 100%;
+        margin-left: 0 !important;
+        text-align: center;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 0.9rem;
+    }
+
+    .trust-indicators {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .hero-image {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100% !important;
+    }
+
+    .counter-box {
+        gap: 40px;
+        padding: 40px 5%;
+    }
+
+    .counter-item h2 {
+        font-size: 2.5rem;
+    }
+
+    .register-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 5%;
+    }
 }
 
 /* Featured Profiles Grid */
